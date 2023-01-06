@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event </title>
+    <style>
+        body * {
+            margin: 20px;
+            border: 2px solid green;
+        }
+    </style>
+
+</head>
+
+<body>
+    <form onclick="alert('form')">FORM
+        <div onclick="alert('div')">DIV
+            <p onclick="alert('p')">P
+            </p>
+
+        </div>
+
+
+    </form>
+   <!--  Capture===> target===> bubble  -->
+   <!-- onclick will work ---p aler ==> div alert==> form alert -->
+
+
+
+
+</body>
+
+</html>
+
+<!-- Event Delegation 
+Used to hinder the limitation of event listener , instead of giving several event listerner, w ecan give to direvt parent element -->

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+           
+            font-size: 36px;
+            background-color: grey;
+         
+        }
+        div#content{
+         
+            position: absolute;
+            left: 30%;
+          
+            width: 400px;
+            height: 550px;
+            grid-template: 0px;
+            display: none;
+            color: white;
+            background-color: black;
+            border-radius: 40px;
+            border-color: wheat;
+           
+            padding: 30px;
+        }
+        button{
+            font-size: 30px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        #show{
+            color: red;
+            text-decoration: none;
+            border: none;
+            background-color: grey;
+          
+           
+        }
+        
+       
+
+
+    </style>
+</head>
+<body>
+
+    
+    <p>To know more about Masai School  <button id="show" onclick="show()">Click here</button></p>
+
+    <div id="content">
+        <p>A Transformation in education </p>
+
+        <ul class="full">
+           <h3 >Full Stack Dveloper        </h3>
+             <li>JavaScript</li> 
+             <li>HTML </li> 
+             <li>CSS</li> 
+           
+            
+     
+            <li>Data Science</li>
+            <li>JAVA</li>
+        </ul>
+
+        <button id="hide" onclick="hide()">Hide</button>
+    </div>
+    
+</body>
+
+<script>
+    function show(){
+    document.getElementById("content").style.height="600px"
+
+    document.getElementById("content").style.display="block"
+
+    document.getElementById("show").style.display="none"
+    }
+
+    
+
+
+    
+    function hide(){
+    document.getElementById("content").style.height="0px"
+
+    document.getElementById("content").style.display="none"
+
+    document.getElementById("show").style.display="inline"
+
+    
+
+
+    }
+</script>
+</html>
