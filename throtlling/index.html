@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- It is technique to limit the execution of event handlers function, when an event is get triggerd contiously due to user action  -->
+</head>
+
+<body>
+    <section>
+        <input type="text" placeholder="Search here">
+
+        <button id="myid" onclick="newFun()">Search</button>
+    </section>
+
+</body>
+
+<script>
+
+
+
+
+
+
+
+    const mythrottle = (fn, d) => {
+        return function () {
+            document.getElementById("myid").disabled = true;
+            setTimeout(() => {
+
+                fn()
+
+            }, d);
+        }
+
+    }
+
+    const newFun = mythrottle(() => {
+        document.getElementById("myid").disabled = false;
+        console.log("user clicked")
+    }, 2000)
+
+
+
+</script>
+
+</html>
