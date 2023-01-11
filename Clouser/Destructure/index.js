@@ -1,11 +1,11 @@
 // Destructure-  Process of unpack the properties of a variable 
 
-var userr={
+var user={
     name:"prem",
     city:"Blore",
     age:"24"
 }
-// console.log(city)
 
-let { name, city}=userr
+let {name,city}=user
 console.log(name, city)
+

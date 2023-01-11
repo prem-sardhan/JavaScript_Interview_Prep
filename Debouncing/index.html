@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <button id="myid">Click me </button>
+  <!-- <input type="text" id="myid" onkeyup="debounce"> -->
+  
+</body>
+
+<script>
+  // describe debounce function 
+  // clearinterval is used to reset the time if user continue clicking the button to fetch API
+  let counter=0
+  function debounce(fn,d){
+
+    let TimeID
+    return function(){
+      if(TimeID){
+        clearInterval(TimeID)
+      }
+      TimeID= setTimeout(() => {
+        fn()
+        
+      }, d);
+    }
+  }
+
+
+// catch th button 
+  document.getElementById("myid").addEventListener("click",debounce(e=>{
+    console.log("user clicked",counter++)
+  },2000))
+ 
+</script>
+</html>
