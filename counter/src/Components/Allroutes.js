@@ -1,6 +1,6 @@
 import React from 'react';
 import Counter from '../Pages/Counter';
-import Stopwatch from '../Pages/Stopwatch';
+import Stopwatch from '../Pages/Stopwatch/Stopwatch';
 import Timer from '../Pages/Timer';
 import Todo from '../Pages/Todo/Todo';
 import Homepage from '../Pages/Homepage';
