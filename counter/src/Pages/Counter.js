@@ -15,15 +15,25 @@ setcount(count+1)
 
 // COde for advanced counter 
 
-  const handleincr=()=>{
+  const handletoggle=()=>{
   
-      }
-      const handledecr=()=>{
+if(ginti==0){
+  for (let i = 1; i <=10; i++) {
+   setTimeout(() => setginti(i),i*1000 );
     
+  }
+
+}else{
+for (let i = 10; i >= 0; i--) {
+  setTimeout(()=> setginti(i),(10-i)*1000 );
+  
+}
+}
+
+
+
       }
-      const handlerese=()=>{
-        
-      }
+     
   
 
 
@@ -37,9 +47,8 @@ setcount(count+1)
 
 <h2>Advance counter where on a button click it should count from 0 to 10 and on clicking it again it should count from 10 to 0.</h2>
 <h1>{ginti}</h1>
-<button onClick={handleincr}>INC</button>
-<button onClick={handledecr} disabled={count==0}>DEC</button>
-<button onClick={handlerese}>RESET</button>
+<button onClick={handletoggle}>TOggle me</button>
+
 
 
 
