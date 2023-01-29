@@ -5,7 +5,7 @@
 console.log(a)
 var a=5;
 console.log(a)
-// THis will print 5 two times 
+// THis will print undefined first then 5 
 
 hello()
 function hello() {
