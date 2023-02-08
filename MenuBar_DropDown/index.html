@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .menu{
+            margin-top: 20px;
+            width: 50%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            margin: auto;
+            font-weight: bold;
+           
+            padding: 5px 20px;
+            border: 2px solid black;
+        }
+
+        .menu button{
+            background-color: white;
+           font-size: 16px;
+           border: 2px solid grey;
+           padding: 5px 10px;
+           cursor: pointer;
+           border: none;
+
+
+        }
+        .dropdown{
+            position: relative;
+            display: inline-block;
+        }
+        .dropdowncontent{
+            display: none;
+            margin-top: 10px;
+            border: 3px solid grey;
+            font-weight: bold;
+            font-size: 18px;
+           min-width: 150px;
+            position: absolute;
+            z-index: 1;
+            
+            
+            
+            
+          
+
+        }
+        #insidecontent{
+            display: flex;
+            justify-content: space-between;
+            margin: auto;
+            font-size: 19px;
+
+
+        }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <button>File</button>
+        <div class="dropdown">
+            <button id="editbtn">Edit</button>
+            <div class="dropdowncontent">
+                <div id="insidecontent">
+                    <div>
+                        Undo
+                    </div>
+                    <div>
+                        Cmd Z
+                    </div>
+        
+                </div>
+                <div id="insidecontent">
+                    <div>
+                        Redo
+                    </div>
+                    <div>
+                        Cmd Y
+                    </div>
+        
+                </div>
+                <div id="insidecontent">
+                    <div>
+                        Undo
+                    </div>
+                    <div>
+                        Cmd Z
+                    </div>
+        
+                </div>
+                <hr>
+                <div id="insidecontent">
+                    <div>
+                        Cut
+                    </div>
+                    <div>
+                        Cmd X
+                    </div>
+        
+                </div>
+                <div id="insidecontent">
+                    <div>
+                        Copy
+                    </div>
+                    <div>
+                        Cmd C
+                    </div>
+        
+                </div>
+                <div id="insidecontent">
+                    <div>
+                        Paste
+                    </div>
+                    <div>
+                        Cmd V
+                    </div>
+        
+                </div>
+                <div id="insidecontent">
+                    <div>
+                        Select all
+                    </div>
+                    <div>
+                        Cmd A
+                    </div>
+        
+                </div>
+                <hr>
+                <div id="insidecontent">
+                    <div>
+                        Find and replace
+                    </div>
+                    <div>
+                        Cmd H
+                    </div>
+        
+                </div>
+            </div>
+        </div>
+        <button>Format</button>
+        <button>View</button>
+        <button>History</button>
+    </div>
+    
+</body>
+
+<script>
+   let editbtn = document.getElementById("editbtn")
+   let Drop= document.querySelector(".dropdowncontent")
+   
+
+   editbtn.addEventListener("click", function() {
+    Drop.style.display= Drop.style.display === "block" ? "none" : "block"
+   })
+</script>
+</html>
