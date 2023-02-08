@@ -45,3 +45,34 @@ function totalSUm(total=0,num){
 let sumhai=arr.reduce(totalSUm)
 console.log(sumhai)
 // It is used when we have to find a single variable it returns a single variable 
+
+
+// Easy Examples 
+
+const ay=[2,4,6,6,7,7]
+// Map function 
+const find=ay.map((el)=>{
+  return el*2
+})
+console.log(find)
+
+// For each function 
+
+const hello=ay.forEach((el)=>{
+  return el*2
+})
+console.log(hello)
+
+
+// Filter FUnction 
+const filt=ay.filter((el)=>{
+  return el%2==0
+})
+console.log(filt)
+
+// Reduce Function 
+
+const red=ay.reduce((acc,curr)=>{
+return acc+curr
+},0)
+console.log(red)
