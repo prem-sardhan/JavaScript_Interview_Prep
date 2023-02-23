@@ -1,0 +1,301 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins;
+}
+a {
+  text-decoration: none;
+}
+header {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 85px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 13%;
+  background-color: white;
+ 
+}
+.logo > img {
+  height: 40px;
+  margin-top: 10px;
+}
+nav {
+  margin-right: -80px;
+}
+
+nav li {
+  display: inline-block;
+  list-style: none;
+  padding: 0px 20px;
+}
+nav + button {
+  padding: 9px 25px;
+  border: none;
+  border-radius: 40px;
+  height: 60px;
+  width: 200px;
+  font-size: 17px;
+  text-transform: none;
+  background-color: #73299a;
+}
+nav + button a {
+  color: white;
+}
+
+.hover {
+  display: inline-block;
+  position: relative;
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 17px;
+}
+.hover:hover {
+  color: #d10edd;
+}
+.hover::after {
+  content: "";
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  position: absolute;
+  left: 0;
+  background-color: #d10edd;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.srvice {
+  width: 280px;
+  margin: auto;
+  text-align: center;
+  padding: 3px 30px;
+  background-color: #ede0f4;
+  border-radius: 8px;
+  margin-top: 130px;
+}
+.srvice p,
+.srvicehia p {
+  color: #951fb3;
+  font-family: "Roboto", sans-serif;
+
+  font-size: 18px;
+  font-weight: 550;
+  line-height: 27px;
+}
+.srvicehia {
+  width: 280px;
+  padding: 3px 30px;
+  background-color: #ede0f4;
+  border-radius: 8px;
+}
+.srvicehia + h1 {
+  font-size: 55px;
+  padding: 18px 0 20px 0;
+}
+.srvicehia + h1 span {
+  font-weight: 300;
+}
+.srvicehia + h1 + p {
+  font-size: 18px;
+  padding-bottom: 18px;
+}
+.srvice + div {
+  width: 500px;
+  margin: auto;
+  margin-top: 20px;
+  text-align: center;
+}
+.srvice + div > p {
+  color: #010101;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 48px;
+}
+.srvice + div > p > span {
+  font-weight: 200;
+}
+.gridfacilities {
+  width: 76%;
+  margin: auto;
+  margin-top: 20px;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.gridfacilities > div {
+  height: 265px;
+  border-radius: 10px;
+  margin-bottom: 50px;
+  padding: 25px 30px 30px 35px;
+  z-index: 1;
+  background-color: #fff;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+.gridfacilities > div:hover {
+  transform: scale(1.05);
+  box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px,
+    rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px,
+    rgba(240, 46, 170, 0.05) 25px 25px;
+  transition: 0.8s ease-in-out;
+}
+
+.gridfacilities > div svg {
+  height: 49px;
+  width: 49px;
+  fill: #30347b;
+}
+.gridfacilities > div > h3 {
+  color: #010101;
+  font-size: 24px;
+  font-weight: 700;
+  padding-bottom: 15px;
+  margin-top: 20px;
+}
+.gridfacilities > div > p {
+  line-height: 1.5;
+  color: #666;
+  font-size: 17px;
+  font-family: "Roboto", Sans-serif;
+}
+.middlea {
+ 
+  height: 730px;
+  width: 100%;
+  margin-top: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.middlea > div {
+  height: 530px;
+  width: 90%;
+ 
+  display: flex;
+}
+.middlea > div > div:nth-child(1) {
+  position: relative;
+  background-image: url("https://themexriver.com/appilo-theme/saas-classic/wp-content/uploads/sites/10/2021/07/b-shape4-1.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 30%;
+  height: 700px;
+  margin-left: -100px;
+  margin-top: -100px;
+}
+.middlea > div > div:nth-child(2) {
+
+  width: 40%;
+  position: absolute;
+  margin-left: 100px;
+  z-index: 1;
+}
+
+.middlea > div > div:nth-child(3) {
+ 
+  width: 55%;
+  margin-left: 250px;
+  position: relative;
+  z-index: 1;
+}
+.middlea > div > div::nth-child(3) > img {
+  width: 100%;
+  height: 110%;
+  position: relative;
+}
+.middlea > div > div:nth-child(4) {
+  content: "";
+
+  background-image: url("https://themexriver.com/appilo-theme/saas-classic/wp-content/themes/appilo/img/saas-classic/banner/b-shape1.png");
+  right: 0;
+
+  width: 70%;
+  background-repeat: no-repeat;
+  top: 140px;
+  height: 100%;
+  box-sizing: border-box;
+  position: absolute;
+}
+
+.btnhai button {
+  height: 50px;
+  width: 175px;
+  text-align: center;
+
+  border-radius: 50px;
+  margin-right: 30px;
+  font-weight: 600;
+  font-size: 18px;
+  color: #010101;
+  font-family: "Poppins";
+
+  border: 2px solid #6c2b95;
+}
+
+.btnhai button:hover {
+  color: white;
+  transform: translate3D(0, 0, 0);
+  transition: all 0.5s;
+  background-color: #652a8c;
+}
+.curveimagehai>img:first-child{
+position: absolute;
+top: 0;
+margin-left: 400px;
+-webkit-animation: linear infinite;
+-webkit-animation-name: jugaad;
+-webkit-animation-duration: 6s;
+
+
+
+}
+@-webkit-keyframes jugaad {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: 10%;
+  }
+  100% {
+    left: 0;    
+  }
+}
+@keyframes updown {
+  0% {
+    transform: translateY(-1%);
+  }
+
+  50% {
+    transform: translateY(3%);
+  }
+
+  100% {
+    transform: translateY(-1%);
+  }
+}
+.curveimagehai+img{
+ 
+ position: absolute;
+margin-left: 1380px;
+width: 16%;
+margin-top: -100px;
+ box-sizing: border-box;
+ animation: updown 6s ease infinite;
+ 
+
+}
