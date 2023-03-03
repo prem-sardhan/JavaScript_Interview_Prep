@@ -52,3 +52,6 @@ function a(){
 }
 a()
 
+
+
+// Closure Simple Example 
