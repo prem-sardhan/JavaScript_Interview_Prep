@@ -6,15 +6,15 @@ setTimeout(() => {
 }, 3000);
 }
 
-// function mauj1(){
-// console.log("mauj1 starts here")
+function mauj1(){
+console.log("mauj1 starts here")
 
-// mauj2()
+mauj2()
 
-// console.log("mauj1 ends here")
-// }
+console.log("mauj1 ends here")
+}
 
-// mauj1()
+mauj1()
 
 // Output will be 
 // mauj1 starts here
