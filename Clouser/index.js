@@ -1,6 +1,6 @@
 // closure---  closure is created when a child function keep the environment of the parent scope even after the parent function has already executed 
 
-// 1. print the array elelment with their index in a list in interval of I*1000
+// 1. print the array element with their index in a list in interval of I*1000
 
 let arr=[1,2,3,4,5]
 for(let i=0;i<arr.length;i++){
@@ -55,3 +55,20 @@ a()
 
 
 // Closure Simple Example 
+function help(){
+ var z=4;
+
+ function inn(){
+    var z=5
+    return z;
+ }
+ return inn;
+
+
+}
+var callme=help();
+console.log(callme())
+
+ setTimeout(() => {
+    console.log("hello")
+ }, 4000);
