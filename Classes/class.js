@@ -15,7 +15,17 @@ class UserProfile{
 let obj=new UserProfile("Amir",34)
 obj.getName()
 
+class Suzuki{
+  constructor(wheel,type){
+  this.wheel=wheel;
+  this.type=type;
+  }
+getCarname(){
+  console.log(`Our car has ${this.wheel} wheels and it is a ${this.type}`)
+}
+}
 
+<<<<<<< HEAD
 
 
 // class person{
@@ -42,3 +52,8 @@ obj.getName()
 
 // let p1= new person("prem",24)
 // console.log(p1)
+=======
+let final= new Suzuki(4,"sedan")
+console.log(final)
+final.getCarname()
+>>>>>>> 6c6377a0ff3bca7aa92781b5214b5b60d59d97e7
