@@ -1,39 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>event </title>
-    <style>
-        body * {
-            margin: 20px;
-            border: 2px solid green;
-        }
-    </style>
-
+    <title>Document</title>
 </head>
-
 <body>
-    <form onclick="alert('form')">FORM
-        <div onclick="alert('div')">DIV
-            <p onclick="alert('p')">P
-            </p>
-
+    
+    <div>
+        <div id="myList">
+            <li>Apple</li>
+            <li>Banana</li>
+            <li>Mango</li>
         </div>
-
-
-    </form>
-   <!--  Capture===> target===> bubble  -->
-   <!-- onclick will work ---p aler ==> div alert==> form alert -->
-
-
-
-
+    </div>
 </body>
 
+<script>
+    document.getElementById("myList").addEventListener("click",function(e){
+
+        const target=e.target
+        if(target.matches("li")){
+            target.style.backgroundColor="red"
+        }
+    })
+</script>
+<!-- explanation -->
+<!-- we have 3 child element that is apple , banana and mango, rather than giving click event in each element we can assign direct to their parent element,  -->
 </html>
 
-<!-- Event Delegation 
-Used to hinder the limitation of event listener , instead of giving several event listerner, w ecan give to direvt parent element -->
+<!-- NOTES------------------------ -->
+<!-- Event delegation is a technique in JavaScript where instead of attaching an event listener to each individual element, you attach a single event listener to a parent element. This parent element then handles events that occur on its child elements by utilizing event bubbling.
+
+When an event is triggered on a child element, it bubbles up through its parent elements in the DOM hierarchy, until it reaches the root element (usually the document). By leveraging event bubbling, the parent element can listen for events from its children and perform the appropriate action based on the event target. -->

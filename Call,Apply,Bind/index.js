@@ -19,9 +19,9 @@ function getEmail(){
 }
 
 
-console.log(getEmail.call(student))
-console.log(getEmail.call(teacher))
-console.log(chooseSubject.apply(teacher,["science","Maths"]))
+// console.log(getEmail.call(student))
+// console.log(getEmail.call(teacher))
+console.log(chooseSubject.apply(student,["science","Maths"]))
 
 
 // It will create a function but that function won't be called

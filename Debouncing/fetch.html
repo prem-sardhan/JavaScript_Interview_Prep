@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="inputhai">
+
+    <input type="text" id="inputhai">
+
+    
+</body>
+
+<script>
+    let counter=0
+// async function debouncing() {
+//     let val=document.querySelector("#inputhai").value;
+//     try {
+//         let res=await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${val}`);
+//         let data=await res.json()
+//         console.log('data', data,counter++)
+//     } catch (error) {
+//         console.log(error.message)
+//     }
+// }
+// let counter=0
+
+async function debouncing(){
+  let val=document.querySelector("#inputhai").value;
+  try {
+    let res = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${val}`);
+    let data = res.json()
+    console.log("data",data,counter++)
+    
+  } catch (error) {
+    console.log(error)
+    
+  }
+
+}
+  function debounce(fn,d){
+    let TimeID;
+    return function(){
+      if(TimeID){
+        clearInterval(TimeID)
+      }
+      TimeID= setTimeout(() => {
+        fn()
+      }, d);
+    }
+  }
+// catch th button
+  document.getElementById("inputhai").addEventListener("input",debounce(debouncing,2000))
+    
+</script>
+</html>
