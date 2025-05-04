@@ -7,10 +7,10 @@ var a=5;
 console.log(a)
 // THis will print undefined first then 5 
 
-hello()
-function hello() {
-    console.log('hello')
-}
+// hello()
+// function hello() {
+//     console.log('hello')
+// }
 
 
 

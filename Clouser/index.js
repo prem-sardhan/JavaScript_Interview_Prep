@@ -2,14 +2,14 @@
 
 // 1. print the array element with their index in a list in interval of I*1000
 
-let arr=[1,2,3,4,5]
-for(let i=0;i<arr.length;i++){
-    setTimeout(() => {
-        console.log(arr[i],i)
+// let arr=[1,2,3,4,5]
+// for(let i=0;i<arr.length;i++){
+//     setTimeout(() => {
+//         console.log(arr[i],i)
         
-    }, i*1000);
+//     }, i*1000);
  
-}
+// }
 
 
 //----- OutComes:  inner function settimeout can access the global variable i.e arr, also here let plays a locally scoped varoable
@@ -38,37 +38,33 @@ for(let i=0;i<arr.length;i++){
 
 
 // CLOSURE EXAMPLE-----------
-function a(){
-    var a =10;
-    function b(){
-        var b=20;
-        function c(){
-            console.log(a,b)
+// function a(){
+//     var a =10;
+//     function b(){
+//         var b=20;
+//         function c(){
+//             console.log(a,b)
 
-        }
-        c()
-    }
-    b()
-}
-a()
+//         }
+//         c()
+//     }
+//     b()
+// }
+// a()
 
 
 
 // Closure Simple Example 
-function help(){
- var z=4;
-
- function inn(){
-    var z=5
-    return z;
- }
- return inn;
-
-
+function outer(){
+    var count =0
+    function inner(){
+        count++
+        console.log(count)
+    }
+    return inner
 }
-var callme=help();
-console.log(callme())
-
- setTimeout(() => {
-    console.log("hello")
- }, 4000);
+const counter = outer()
+counter()
+counter()
+counter()
+  
