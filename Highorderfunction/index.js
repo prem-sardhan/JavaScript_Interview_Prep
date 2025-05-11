@@ -10,7 +10,7 @@
 
 let arr=[1,2,3,4,5,45,23]
 arr.forEach((el)=>{
-console.log(el)
+console.log(el,"aaaaaaaaaaaaaaa")
 })
 // it doesn't returns a new array 
 // it doesn return anything
@@ -22,7 +22,7 @@ let newArr=arr.map((el)=>{
     return el*el
 })
 // It return a new array by transforming that array
-console.log(newArr)
+console.log(newArr,"newwww")
 console.log(arr)
 
 
@@ -55,10 +55,10 @@ const find=ay.map((el)=>{
   return el*2
 })
 console.log(find)
-
+  
 // For each function 
 
-const hello=ay.forEach((el)=>{
+const hello = ay.forEach((el)=>{
   return el*2
 })
 console.log(hello)
@@ -76,3 +76,5 @@ const red=ay.reduce((acc,curr)=>{
 return acc+curr
 },0)
 console.log(red)
+
+
